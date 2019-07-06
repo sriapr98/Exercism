@@ -4,31 +4,25 @@ class Hamming {
     Hamming(String leftStrand, String rightStrand) {
         left=leftStrand;
         right=rightStrand;
+        checkExceptions();
     }
-
+    void checkExceptions(){
+        if(left.length()!=right.length()){
+            if(left.length()==0)
+                throw new IllegalArgumentException("left strand must not be empty.");
+            else if(right.length()==0)
+                throw new IllegalArgumentException("right strand must not be empty.");
+            else
+                throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
+        }
+    }
     int getHammingDistance() throws IllegalArgumentException {
     	int count=0;
-    	if(left.length()==right.length()){
-        	for(int i=0;i<right.length();i++){
-        		if(left.charAt(i)!=right.charAt(i)){
-        			count++;
-        		}
-        	}
-        	return count;
-        }
-    	else if(left.length()==0){
-    		System.out.println("Hi");
-    		throw new IllegalArgumentException("left strand must not be empty.");
+    	for(int i=0;i<right.length();i++){
+    		if(left.charAt(i)!=right.charAt(i))
+    			count++;
     	}
-    	else if(right.length()==0){
-    		throw new IllegalArgumentException("right strand must not be empty.");
-    	}
-        else if(left.length()!=right.length()){
-        	throw new IllegalArgumentException("leftStrand and rightStrand must be of equal length.");
-        }
-        else{
-        	return 0;
-        }
+    	return count;
     }
 }
 
