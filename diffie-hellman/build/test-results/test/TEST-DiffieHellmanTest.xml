@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="DiffieHellmanTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-07-22T08:08:52" hostname="srikkanth-Latitude-E6420" time="0.006">
+  <properties/>
+  <testcase name="testExchange" classname="DiffieHellmanTest" time="0.003"/>
+  <testcase name="testPrivateKeyInRange" classname="DiffieHellmanTest" time="0.0"/>
+  <testcase name="testPublicKeyCorrectlyCalculated" classname="DiffieHellmanTest" time="0.0"/>
+  <testcase name="testPrivateKeyRandomlyGenerated" classname="DiffieHellmanTest" time="0.0"/>
+  <testcase name="testSecretKeyCorrectlyCalculated" classname="DiffieHellmanTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
